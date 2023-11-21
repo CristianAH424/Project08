@@ -50,99 +50,103 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="403dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:backgroundTint="#378A60"
-            android:text="Mes"
-            android:textSize="11sp" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:backgroundTint="#378A60"
-            android:text="Material"
-            android:textSize="11sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:backgroundTint="#378A60"
-            android:text="Cantidad"
-            android:textSize="11sp" />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="232dp">
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#378A60"
-            android:text="Porcentaje"
-            android:textSize="11sp" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvTableNombre"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Material"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvTableCantidad"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:text="Cantidad"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvTablePrecio"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:text="costo K/g"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvTablePreciomes"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:text="mes"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvTableValor"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:text="Valor"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="403dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="72dp"
-        android:orientation="horizontal"
+        android:layout_width="165dp"
+        android:layout_height="63dp"
+        android:layout_margin="5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fondo_s"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.468">
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:text="Enero"
-            android:layout_marginLeft="20dp"/>
+            android:text="Total"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textViewTotalPay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:text="Carton" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:text="10" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="20%"
-            android:textColor="@color/black"
-            />
-
+            android:text="$500.000"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
     </LinearLayout>
 
 

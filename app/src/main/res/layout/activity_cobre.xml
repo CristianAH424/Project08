@@ -55,41 +55,41 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="178dp"
-        android:layout_height="213dp"
+        android:layout_width="190dp"
+        android:layout_height="171dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/cobre" />
+
     <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="374dp"
         android:layout_height="54dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="6dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10">
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="67dp"
+            android:layout_width="14dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:text="Costo por kilogramo:"
             android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Costo por kilogramo:"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextKl4"
+            android:id="@+id/editTextKl3"
             android:layout_width="80dp"
             android:layout_height="48dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:background="#EB378A60"
             android:ems="10"
             android:hint="  $"
@@ -98,35 +98,36 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout11"
         android:layout_width="374dp"
         android:layout_height="54dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="6dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="67dp"
+            android:layout_width="12dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:text="Peso Estimado:"
             android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Peso Estimado:"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTexPe4"
+            android:id="@+id/editTexPe3"
             android:layout_width="80dp"
             android:layout_height="48dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="#EB378A60"
             android:ems="10"
             android:hint=" peso:"
-            android:layout_gravity="center"
             android:inputType="number"
             android:textColorHint="@color/white" />
     </LinearLayout>
@@ -135,26 +136,26 @@
         android:id="@+id/linearLayout10"
         android:layout_width="374dp"
         android:layout_height="54dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="6dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="58dp"
+            android:layout_width="21dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:textColor="@color/black"
             android:text="Total:"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTo4"
+            android:id="@+id/editTextTo3"
             android:layout_width="80dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -167,7 +168,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/btnRe3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
@@ -178,5 +179,41 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.377" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="374dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="21dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Mes: "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinnerMonthElectricity"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:entries="@array/months"
+            android:popupElevation="10dp"
+            android:scrollbarSize="6dp"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

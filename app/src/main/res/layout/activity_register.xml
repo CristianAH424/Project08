@@ -33,7 +33,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -47,7 +47,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/TvNombreC"
+                android:id="@+id/name_User"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -64,7 +64,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:orientation="vertical">
 
             <TextView
@@ -73,12 +73,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
-                android:text="Email"
+                android:text="Correo"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/edt1"
+                android:id="@+id/email_User"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -86,7 +86,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/edittex"
                 android:ems="16"
-                android:hint="Digite su Email"
+                android:hint="Digite su correo"
                 android:inputType="text" />
 
 
@@ -95,7 +95,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:orientation="vertical">
 
             <TextView
@@ -104,12 +104,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
-                android:text="Usuario"
+                android:text="Telefono"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/edtTel"
+                android:id="@+id/phone_User"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -125,8 +125,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="164dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="5dp"
             android:orientation="vertical">
 
             <TextView
@@ -139,7 +139,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/Password_User"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -149,17 +149,45 @@
                 android:hint="Digite su contraseña"
                 android:inputType="textPassword" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/passwordtwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Repita la Contraseña"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/password_User2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittex"
+                android:ems="16"
+                android:hint="Repita la Contraseña"
+                android:inputType="textPassword" />
+
             <Button
                 android:id="@+id/btnregis"
-                android:layout_width="172dp"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#378A60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green"
                 android:text="Registrar"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:cornerRadius="5dp"/>
+                app:cornerRadius="5dp">
+            </Button>
 
 
         </LinearLayout>
