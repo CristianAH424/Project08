@@ -3,15 +3,16 @@ package com.example.projecto08.models;
 public class cardboard {
     private final String SERIAL;
     private int quantity,price,total;
-    private String month, idUser;
+    private String month, idUser,material;
 
-    public cardboard(String SERIAL, int quantity, int price, int total, String month, String idUser) {
+    public cardboard(String SERIAL, int quantity, int price, int total, String month, String idUser,String material) {
         this.SERIAL = SERIAL;
         this.quantity = quantity;
         this.price = price;
         this.total = total;
         this.month = month;
         this.idUser = idUser;
+        this.material= material;
 
 
 
@@ -53,5 +54,7 @@ public class cardboard {
     public String getIdUser() {
         return idUser;
     }
+
+    public String getMaterial(){return material;}
 
 }
