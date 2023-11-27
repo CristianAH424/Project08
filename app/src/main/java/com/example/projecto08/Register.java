@@ -123,7 +123,7 @@ public class Register extends AppCompatActivity {
             FileWriter writer=new FileWriter(fileUser,true);
             BufferedWriter bufferedWriter= new BufferedWriter(writer);
             bufferedWriter.write(
-                    user.getId()+","+
+                    user.getID()+","+
                             user.getName()+","+
                             user.getEmail()+","+
                             user.getPhone()+","+

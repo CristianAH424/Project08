@@ -10,14 +10,23 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.projecto08.models.User;
+import com.example.projecto08.models.cardboard;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class Carton extends AppCompatActivity {
 
     ImageView salir;
-    EditText Costo,Peso,Total;
+    EditText Costo,Peso;
     Spinner Mes;
     Button register;
-    TextView material;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +37,10 @@ public class Carton extends AppCompatActivity {
         Peso = findViewById(R.id.Peso_Carton);
         Mes = findViewById(R.id.spinnerMonthElectricity);
         register = findViewById(R.id.btnRegistrar_carton);
-        material= findViewById(R.id.material_carton);
 
+
+        Intent receive= getIntent();
+        String idUser= receive.getStringExtra("idUser");
 
         Intent exit= new Intent(getApplicationContext(), Materiales.class);
 
@@ -43,12 +54,50 @@ public class Carton extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(Peso.getText().toString().isEmpty()||
+                   Costo.getText().toString().isEmpty() ||
+                   Mes.getSelectedItem().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),
+                    "Todos los Campos deben diligenciarse", Toast.LENGTH_LONG).show();
+                }else {
+                    int pesoCarton= Integer.parseInt(Peso.getText().toString());
+                    int costoCarton= Integer.parseInt(Costo.getText().toString());
+                    String monthCarton= Mes.getSelectedItem().toString();
+                    int total = pesoCarton*costoCarton;
+                    String serial= idUser+monthCarton;
+                    cardboard materialCarton = new cardboard(serial,pesoCarton,costoCarton,monthCarton,total,idUser);
+                    registrerCarboard(materialCarton);
+                    Toast.makeText(getApplicationContext(),"Registro exitoso",
+                            Toast.LENGTH_LONG).show();
+                    cleanView();
+
+                }
 
             }
         });
 
+    }
+    public void registrerCarboard(cardboard material){
+        File cardboardFile= new File(getFilesDir(),"cardboard.txt");
 
+        try {
+            FileWriter writer=new FileWriter(cardboardFile, true);
+            BufferedWriter bufferedWriter= new BufferedWriter(writer);
+            bufferedWriter.write(
+                    material.getSERIAL()+","+
+                       material.getQuantity()+","+
+                       material.getPrice()+","+
+                       material.getMonth()+","+
+                       material.getTotal()+","+
+                       material.getIdUser()
 
-
+            );
+            bufferedWriter.newLine();
+            bufferedWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public void cleanView(){
     }
 }

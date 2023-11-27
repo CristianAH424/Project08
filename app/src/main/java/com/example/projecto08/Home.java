@@ -25,6 +25,14 @@ public class Home extends AppCompatActivity {
         Intent recomendacion= new Intent(getApplicationContext(), Recomendaciones.class);
         Intent material=new Intent(getApplicationContext(), Materiales.class);
 
+        //Inten
+        Intent receive= getIntent();
+        String idUser= receive.getStringExtra("idUser");
+
+        material.putExtra("idUser",idUser);
+
+
+
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
