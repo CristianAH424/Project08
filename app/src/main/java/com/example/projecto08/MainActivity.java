@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     String userLogin= user.getText().toString();
                     for (User i: users){
-                        if (i.getEmail().equals(userLogin)){
+                        if (i.getName().equals(userLogin)||
+                        i.getEmail().equals(userLogin) ||
+                                i.getPhone().equals(userLogin)){
                             state= true;
                             if (i.getPassword().equals(password.getText().toString())){
                                 home_activity.putExtra("idUser",i.getID());
@@ -74,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
-
-
             }
         });
     }

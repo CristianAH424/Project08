@@ -12,9 +12,6 @@ public class plastic {
         this.total = total;
         this.month = month;
         this.idUser = idUser;
-
-
-
     }
 
     public String getSERIAL() {
@@ -41,6 +38,9 @@ public class plastic {
         return total;
     }
 
+    public void setTotal(int total) {
+        this.total = total;
+    }
 
     public String getMonth() {
         return month;
@@ -52,5 +52,9 @@ public class plastic {
 
     public String getIdUser() {
         return idUser;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 }

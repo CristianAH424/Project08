@@ -22,6 +22,7 @@ public class Materiales extends AppCompatActivity {
         vidrio = findViewById(R.id.btnV);
         plastico = findViewById(R.id.btnP);
         cobre = findViewById(R.id.btnCo);
+
         Intent receive= getIntent();
         String idUser= receive.getStringExtra("idUser");
 
@@ -40,13 +41,13 @@ public class Materiales extends AppCompatActivity {
                 startActivity(exit);
             }
         });
-
         carton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(Cart);
             }
         });
+
         vidrio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

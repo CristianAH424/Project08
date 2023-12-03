@@ -12,9 +12,6 @@ public class copper {
         this.total = total;
         this.month = month;
         this.idUser = idUser;
-
-
-
     }
 
     public String getSERIAL() {
@@ -52,5 +49,13 @@ public class copper {
 
     public String getIdUser() {
         return idUser;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 }
