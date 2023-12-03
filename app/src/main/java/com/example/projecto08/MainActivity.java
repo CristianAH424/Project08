@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         user= findViewById(R.id.user_login);
         password= findViewById(R.id.Password_login);
 
-        Intent home= new Intent(getApplicationContext(), Home.class);
+        Intent home_activity= new Intent(getApplicationContext(), Home.class);
         Intent regis= new Intent(getApplicationContext(),com.example.projecto08.Register.class);
 
         File fileUser= new File(getFilesDir(),"user.txt");
@@ -56,11 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     String userLogin= user.getText().toString();
                     for (User i: users){
-                        if (i.getEmail().equals(userLogin)){
+                        if (i.getName().equals(userLogin)||
+                        i.getEmail().equals(userLogin) ||
+                                i.getPhone().equals(userLogin)){
                             state= true;
                             if (i.getPassword().equals(password.getText().toString())){
-                                home.putExtra("idUser",i.getId());
-                                startActivity(home);
+                                home_activity.putExtra("idUser",i.getID());
+                                startActivity(home_activity);
                                 break;
                             }else {
                                 Toast.makeText(getApplicationContext(),"la contraseña es incorrecta",Toast.LENGTH_LONG).show();
@@ -74,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
-
-
             }
         });
     }

@@ -4,7 +4,7 @@ public class User {
 
     private final String ID;
 
-    private String id,name,email,phone,password;
+    private String name,email,phone,password;
 
     public User(String id,String name, String email, String phone, String password) {
         this.ID = id;
@@ -14,12 +14,8 @@ public class User {
         this.password = password;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public String getID() {
+        return ID;
     }
 
     public String getName() {

@@ -203,7 +203,7 @@
             android:textSize="16sp" />
 
         <Spinner
-            android:id="@+id/spinnerMonthElectricity"
+            android:id="@+id/spinnerMonthCobre"
             android:layout_width="80dp"
             android:layout_height="48dp"
             android:layout_gravity="center"

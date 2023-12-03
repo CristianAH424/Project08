@@ -23,25 +23,31 @@ public class Materiales extends AppCompatActivity {
         plastico = findViewById(R.id.btnP);
         cobre = findViewById(R.id.btnCo);
 
+        Intent receive= getIntent();
+        String idUser= receive.getStringExtra("idUser");
+
         Intent exit= new Intent(getApplicationContext(), Home.class);
         Intent Cart= new Intent(getApplicationContext(), Carton.class);
+        Cart.putExtra("idUser",idUser);
         Intent Vid= new Intent(getApplicationContext(), Vidrio.class);
+        Vid.putExtra("idUser",idUser);
         Intent Plas= new Intent(getApplicationContext(), Plastico.class);
+        Plas.putExtra("idUser",idUser);
         Intent Cobr= new Intent(getApplicationContext(), Cobre.class);
-
+        Cobr.putExtra("idUser",idUser);
         salirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(exit);
             }
         });
-
         carton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(Cart);
             }
         });
+
         vidrio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

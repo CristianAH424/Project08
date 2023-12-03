@@ -20,10 +20,22 @@ public class Home extends AppCompatActivity {
         recomen= findViewById(R.id.imagReco);
         regism= findViewById(R.id.imagRM);
 
+        //Inten
+        Intent receive= getIntent();
+        String idUser= receive.getStringExtra("idUser");
+
         Intent salir=new Intent(getApplicationContext(), MainActivity.class);
-        Intent estadisticas=new Intent(getApplicationContext(), Estadisticas.class);
+        Intent estadisticas=new Intent(getApplicationContext(), StatisticActivity2.class);
+        estadisticas.putExtra("idUser",idUser);
         Intent recomendacion= new Intent(getApplicationContext(), Recomendaciones.class);
         Intent material=new Intent(getApplicationContext(), Materiales.class);
+        material.putExtra("idUser",idUser);
+
+
+
+
+
+
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
