@@ -1,5 +1,7 @@
 package com.example.projecto08.models;
 
+import android.widget.TableRow;
+
 public class cardboard {
     private final String SERIAL;
     private int quantity,price,total;
@@ -17,6 +19,12 @@ public class cardboard {
 
 
     }
+
+
+
+    public static void addView(TableRow row) {
+    }
+
 
     public String getSERIAL() {
         return SERIAL;

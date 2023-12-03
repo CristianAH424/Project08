@@ -17,6 +17,10 @@ import com.example.projecto08.models.producto;
 import java.util.ArrayList;
 
 public class StatisticActivity2 extends AppCompatActivity {
+    TextView totalWater,totalElectricity,totalPay, monthWater,
+            quantityWater, monthElectricity,quantityElectricity;
+
+    Button more;
     EditText name,prize,quantity;
     Button register,end;
     TextView totalValvue;
