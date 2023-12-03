@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         user= findViewById(R.id.user_login);
         password= findViewById(R.id.Password_login);
 
+
         Intent home_activity= new Intent(getApplicationContext(), Home.class);
         Intent regis= new Intent(getApplicationContext(),com.example.projecto08.Register.class);
 

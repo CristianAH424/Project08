@@ -31,8 +31,8 @@ public class Vidrio extends AppCompatActivity {
         setContentView(R.layout.activity_vidrio);
 
         salir = findViewById(R.id.imagSalirMvidrio);
-        quantity= findViewById(R.id.editTextKl3);
-        price = findViewById(R.id.editTexPe3);
+        quantity= findViewById(R.id.cantidadVidrio);
+        price = findViewById(R.id.costoVidrio);
         months = findViewById(R.id.spinnerMonthElectricity);
         register = findViewById(R.id.btnRe3);
 
@@ -70,7 +70,6 @@ public class Vidrio extends AppCompatActivity {
                     registerVidrio(materialVidrio);
                     Toast.makeText(getApplicationContext(), "Registro exitoso",
                             Toast.LENGTH_LONG).show();
-                    cleanView();
 
                 }
 
@@ -103,11 +102,7 @@ public class Vidrio extends AppCompatActivity {
     }
 
 
-    public void cleanView() {
-        quantity.setText("");
-        price.setText("");
-        months.setSelection(0);
-    }
+
 
 }
 

@@ -20,8 +20,8 @@ import java.io.FileWriter;
 
 public class Plastico extends AppCompatActivity {
     ImageView salir;
-    EditText Costo, Peso,quantity,price;
-    Spinner Mes,months;
+    EditText quantity,price;
+    Spinner months;
     Button register;
 
 
@@ -32,9 +32,9 @@ public class Plastico extends AppCompatActivity {
         setContentView(R.layout.activity_plastico);
 
         salir = findViewById(R.id.imagSalirMPlastico);
-        Costo = findViewById(R.id.editTextKl3);
-        Peso = findViewById(R.id.editTexPe3);
-        Mes = findViewById(R.id.spinnerMonthElectricity);
+        price= findViewById(R.id.editTextKl3);
+        quantity= findViewById(R.id.editTexPe3);
+        months = findViewById(R.id.spinnerMonthElectricity);
         register = findViewById(R.id.btnRe3);
 
         Intent receive = getIntent();
@@ -53,22 +53,22 @@ public class Plastico extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Peso.getText().toString().isEmpty() ||
-                        Costo.getText().toString().isEmpty() ||
-                        Mes.getSelectedItem().toString().isEmpty()) {
+                if (quantity.getText().toString().isEmpty() ||
+                        price.getText().toString().isEmpty() ||
+                        months.getSelectedItem().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(),
                             "Todos los Campos deben diligenciarse", Toast.LENGTH_LONG).show();
                 } else {
-                    int pesoPlastico = Integer.parseInt(Peso.getText().toString());
-                    int costoPlastico = Integer.parseInt(Costo.getText().toString());
-                    String monthplastico = Mes.getSelectedItem().toString();
+                    int pesoPlastico = Integer.parseInt(quantity.getText().toString());
+                    int costoPlastico = Integer.parseInt(price.getText().toString());
+                    String monthplastico = months.getSelectedItem().toString();
                     int total = pesoPlastico * costoPlastico;
                     String serial = idUser + monthplastico;
                    plastic materialPlastico = new plastic(serial,pesoPlastico,costoPlastico,total,monthplastico,idUser);
                     registerplastico(materialPlastico);
                     Toast.makeText(getApplicationContext(), "Registro exitoso",
                             Toast.LENGTH_LONG).show();
-                    cleanView();
+
 
                 }
 
@@ -103,9 +103,5 @@ public class Plastico extends AppCompatActivity {
 
 
 
-    public void cleanView() {
-        quantity.setText("");
-        price.setText("");
-        months.setSelection(0);
-    }
+
 }

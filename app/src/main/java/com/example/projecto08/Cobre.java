@@ -31,9 +31,9 @@ public class Cobre extends AppCompatActivity {
         setContentView(R.layout.activity_cobre);
 
         salir = findViewById(R.id.imagSalirMCobre);
-        quantity = findViewById(R.id.editTextKl3);
-        price = findViewById(R.id.editTexPe3);
-        months = findViewById(R.id.spinnerMonthElectricity);
+        quantity = findViewById(R.id.cantidadCobre);
+        price = findViewById(R.id.precioCobre);
+        months = findViewById(R.id.spinnerMonthCobre);
         register = findViewById(R.id.btnRe3);
 
         Intent receive = getIntent();
@@ -76,7 +76,7 @@ public class Cobre extends AppCompatActivity {
     }
 
     public void registerCobre(copper material) {
-        File plasticFile = new File(getFilesDir(), "plastic.txt");
+        File plasticFile = new File(getFilesDir(), "copper.txt");
 
         try {
             FileWriter writer = new FileWriter(plasticFile, true);

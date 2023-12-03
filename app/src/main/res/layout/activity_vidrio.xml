@@ -87,7 +87,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextkl3"
+            android:id="@+id/costoVidrio"
             android:layout_width="80dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -122,7 +122,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTexPe3"
+            android:id="@+id/cantidadVidrio"
             android:layout_width="80dp"
             android:layout_height="48dp"
             android:layout_gravity="center"

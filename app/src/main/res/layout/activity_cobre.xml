@@ -85,7 +85,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextKl3"
+            android:id="@+id/precioCobre"
             android:layout_width="80dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -120,7 +120,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTexPe3"
+            android:id="@+id/cantidadCobre"
             android:layout_width="80dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
