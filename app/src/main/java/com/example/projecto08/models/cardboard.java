@@ -22,10 +22,6 @@ public class cardboard {
 
 
 
-    public static void addView(TableRow row) {
-    }
-
-
     public String getSERIAL() {
         return SERIAL;
     }
