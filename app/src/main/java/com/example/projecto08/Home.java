@@ -25,7 +25,7 @@ public class Home extends AppCompatActivity {
         String idUser= receive.getStringExtra("idUser");
 
         Intent salir=new Intent(getApplicationContext(), MainActivity.class);
-        Intent estadisticas=new Intent(getApplicationContext(), StatisticActivity2.class);
+        Intent estadisticas=new Intent(getApplicationContext(), Estadisticas.class);
         estadisticas.putExtra("idUser",idUser);
         Intent recomendacion= new Intent(getApplicationContext(), Recomendaciones.class);
         Intent material=new Intent(getApplicationContext(), Materiales.class);
